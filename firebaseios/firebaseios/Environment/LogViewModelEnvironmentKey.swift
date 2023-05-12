@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct LogViewModelEnvironmentKey: EnvironmentKey {
-    static let defaultValue: LogViewModelProtocol = DummyLogViewModel()
+    static let defaultValue: LogViewModelProtocol = FirebaseLogViewModel()
 }
 
 extension EnvironmentValues {
