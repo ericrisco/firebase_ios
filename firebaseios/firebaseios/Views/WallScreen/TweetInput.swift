@@ -92,7 +92,7 @@ struct TweetInput: View {
                                   userName: user.email,
                                   type: .IMAGE,
                                   message: url,
-                                  timestamp: Date().description)
+                                  timestamp: Date().currentDate)
                 
                 tweetsViewModel.postTweet(tweet: tweet, onSuccess: {
                     tweetMessage = ""

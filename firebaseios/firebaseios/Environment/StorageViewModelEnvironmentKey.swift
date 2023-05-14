@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct StorageViewModelEnvironmentKey: EnvironmentKey {
-    static let defaultValue: StorageViewModelProtocol = DummyStorageViewModel()
+    static let defaultValue: StorageViewModelProtocol = FirebaseStorageViewModel()
 }
 
 extension EnvironmentValues {

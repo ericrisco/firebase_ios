@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct TweetsViewModelEnvironmentKey: EnvironmentKey {
-    static let defaultValue: TweetsViewModelProtocol = DummyTweetsViewModel()
+    static let defaultValue: TweetsViewModelProtocol = FirebaseTweetsViewModel()
 }
 
 extension EnvironmentValues {

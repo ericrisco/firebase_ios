@@ -5,7 +5,7 @@
 //  Created by Eric Risco de la Torre on 6/5/23.
 //
 
-enum TweetType {
+enum TweetType: String {
     case TEXT
     case IMAGE
 }
