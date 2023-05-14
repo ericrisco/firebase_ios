@@ -38,6 +38,7 @@
 		85F4136B2A046A7E002A33C3 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F4136A2A046A7E002A33C3 /* LoginView.swift */; };
 		85F413722A0657A6002A33C3 /* WallScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F413712A0657A6002A33C3 /* WallScreen.swift */; };
 		85F519302A0EA60800A5922E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 85F5192F2A0EA60800A5922E /* GoogleService-Info.plist */; };
+		85F76E352A11381600665601 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 85F76E342A11381600665601 /* FirebaseMessaging */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +71,7 @@
 		85F4136A2A046A7E002A33C3 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		85F413712A0657A6002A33C3 /* WallScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallScreen.swift; sourceTree = "<group>"; };
 		85F5192F2A0EA60800A5922E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		85F76E362A11382B00665601 /* firebaseios.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = firebaseios.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85F76E352A11381600665601 /* FirebaseMessaging in Frameworks */,
 				8559FF142A0EB89300D0C202 /* FirebaseCrashlytics in Frameworks */,
 				8559FF0F2A0EAE5900D0C202 /* FirebaseAnalyticsSwift in Frameworks */,
 				8507C9A92A0DA9DC004F2A8C /* Kingfisher in Frameworks */,
@@ -125,6 +128,7 @@
 		85F413422A046320002A33C3 /* firebaseios */ = {
 			isa = PBXGroup;
 			children = (
+				85F76E362A11382B00665601 /* firebaseios.entitlements */,
 				85F413562A0465B7002A33C3 /* App */,
 				85F413512A04650B002A33C3 /* Models */,
 				85F413532A04653F002A33C3 /* Views */,
@@ -270,6 +274,7 @@
 				8507C9A82A0DA9DC004F2A8C /* Kingfisher */,
 				8559FF0E2A0EAE5900D0C202 /* FirebaseAnalyticsSwift */,
 				8559FF132A0EB89300D0C202 /* FirebaseCrashlytics */,
+				85F76E342A11381600665601 /* FirebaseMessaging */,
 			);
 			productName = firebaseios;
 			productReference = 85F413402A046320002A33C3 /* firebaseios.app */;
@@ -502,10 +507,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = firebaseios/firebaseios.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_ASSET_PATHS = "\"firebaseios/Preview Content\"";
+				DEVELOPMENT_TEAM = 42UB6JE5FK;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -517,7 +524,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.firebaseios;
+				PRODUCT_BUNDLE_IDENTIFIER = io.keepcoding.firebase;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -533,9 +540,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = firebaseios/firebaseios.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"firebaseios/Preview Content\"";
+				DEVELOPMENT_TEAM = 42UB6JE5FK;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -547,7 +556,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.firebaseios;
+				PRODUCT_BUNDLE_IDENTIFIER = io.keepcoding.firebase;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -615,6 +624,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 8559FF0D2A0EAE5900D0C202 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseCrashlytics;
+		};
+		85F76E342A11381600665601 /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8559FF0D2A0EAE5900D0C202 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
