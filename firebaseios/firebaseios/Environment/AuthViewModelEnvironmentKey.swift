@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct AuthViewModelEnvironmentKey: EnvironmentKey {
-    static let defaultValue: AuthViewModelProtocol = DummyAuthViewModel(user: User())
+    static let defaultValue: AuthViewModelProtocol = FirebaseAuthViewModel()
 }
 
 extension EnvironmentValues {

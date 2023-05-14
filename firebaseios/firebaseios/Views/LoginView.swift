@@ -96,7 +96,7 @@ struct LoginView: View {
     }
     
     private func loginUser() {
-        authViewModel.login(
+        authViewModel.login(email: email, password: password,
             onSuccess: { user in
                 logViewModel.log(screen: LoginView.viewName, action: "USER_LOGGED_IN")
                 isLoggedIn = true
@@ -110,7 +110,7 @@ struct LoginView: View {
     }
         
     private func registerUser() {
-        authViewModel.register(
+        authViewModel.register(email: email, password: password,
             onSuccess: { user in
                 logViewModel.log(screen: LoginView.viewName, action: "USER_REGISTERED")
                 isLoggedIn = true
@@ -123,7 +123,7 @@ struct LoginView: View {
     }
 
     private func recoverPassword() {
-        authViewModel.recoverPassword(
+        authViewModel.recoverPassword(email: email,
             onSuccess: {
                 logViewModel.log(screen: LoginView.viewName, action: "PASSWORD_RECOVERED")
                 alertMessage = "Password recovery initiated"

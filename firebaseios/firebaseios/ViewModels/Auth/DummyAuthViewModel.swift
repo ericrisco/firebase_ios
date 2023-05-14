@@ -8,33 +8,29 @@
 import Foundation
 
 class DummyAuthViewModel: AuthViewModelProtocol {
-    var user: User
     
-    required init(user: User) {
-        self.user = user
-    }    
-
-    func register(onSuccess: @escaping (User) -> Void, onFailure: @escaping (Error) -> Void) {
-        onSuccess(user)
+    func register(email: String, password: String, onSuccess: @escaping (User) -> Void, onFailure: @escaping (Error) -> Void) {
+        onSuccess(User(id: "123", email: email, password: ""))
     }
 
-    func login(onSuccess: @escaping (User) -> Void, onFailure: @escaping (Error) -> Void) {
-        onSuccess(user)
+    func login(email: String, password: String, onSuccess: @escaping (User) -> Void, onFailure: @escaping (Error) -> Void) {
+        onSuccess(User(id: "123", email: email, password: ""))
     }
 
     func isUserLoggedIn(onSuccess: @escaping (Bool) -> Void, onFailure: @escaping (Error) -> Void) {
         onSuccess(false)
     }
 
-    func recoverPassword(onSuccess: @escaping () -> Void, onFailure: @escaping (Error) -> Void) {
+    func recoverPassword(email: String, onSuccess: @escaping () -> Void, onFailure: @escaping (Error) -> Void) {
         onSuccess()
     }
 
     func getUser(onSuccess: @escaping (User) -> Void, onFailure: @escaping (Error) -> Void) {
-        onSuccess(user)
+        onSuccess(User(id: "123", email: "aaa@aaa.com", password: ""))
     }
 
     func logout(onSuccess: @escaping () -> Void, onFailure: @escaping (Error) -> Void) {
         onSuccess()
     }
+    
 }
