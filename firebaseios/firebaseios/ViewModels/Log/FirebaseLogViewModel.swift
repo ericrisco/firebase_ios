@@ -6,6 +6,7 @@
 //
 
 import Firebase
+import FirebaseCrashlytics
 
 class FirebaseLogViewModel: LogViewModelProtocol {
     func log(screen: String, action: String) {
@@ -15,6 +16,7 @@ class FirebaseLogViewModel: LogViewModelProtocol {
     }
     
     func crash(screen: String, exception: Error) {
-        
+        Crashlytics.crashlytics().setCustomValue("Screen", forKey: screen)
+        Crashlytics.crashlytics().record(error: exception)
     }
 }
